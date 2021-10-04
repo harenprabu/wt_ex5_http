@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
 res.setHeader('content-Type','text/html');
@@ -32,6 +32,6 @@ switch(req.url){
 
 });
 
-server.listen(3000, 'localhost', () => {
+server.listen(port, () => {
     console.log('listening for  request on port 3000');
 });
